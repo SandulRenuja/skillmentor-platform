@@ -18,7 +18,7 @@ Admins can manage mentors, subjects, and bookings through a dedicated dashboard 
 - Track session status (scheduled → confirmed → completed)
 - Write a star rating + review on completed sessions
 
-###Admin
+### Admin
 
 - Role-based access control via Clerk public metadata
 - Create mentors with full profile information via a form
@@ -28,7 +28,7 @@ Admins can manage mentors, subjects, and bookings through a dedicated dashboard 
 - Mark sessions as completed
 Add meeting links to confirmed sessions
 
-###Platform
+### Platform
 
 - Clerk JWT authentication (Clerk-issued tokens verified on the backend)
 - Public mentor discovery (no login required to browse)
@@ -36,3 +36,5 @@ Add meeting links to confirmed sessions
 - OpenAPI / Swagger documentation
 - CORS configuration for cross-origin frontend/backend deployment
 - Dual auth validator support (Clerk JWKS or custom HS256 JWT)
+
+## Tech Stack
