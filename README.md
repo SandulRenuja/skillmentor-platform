@@ -38,3 +38,12 @@ Add meeting links to confirmed sessions
 - Dual auth validator support (Clerk JWKS or custom HS256 JWT)
 
 ## Tech Stack
+
+Frontend   -->   React 19, TypeScript, Vite, Tailwind CSS v4, shadcn/ui
+Backend    -->   Spring Boot 3, Spring Security, Spring Data JPA
+Database   -->   PostgreSQL (Supabase)
+Authentication   -->   Clerk
+Caching    -->   Redis 
+API Docs   -->   SpringDoc OpenAPI (Swagger UI)
+Frontend Deployment   -->   Vercel
+Backend Deployment    -->   Railway
