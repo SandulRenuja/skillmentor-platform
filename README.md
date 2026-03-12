@@ -39,14 +39,16 @@ Add meeting links to confirmed sessions
 
 ## Tech Stack
 
-- Frontend   -->   React 19, TypeScript, Vite, Tailwind CSS v4, shadcn/ui.
-- Backend    -->   Spring Boot 3, Spring Security, Spring Data JPA.
-- Database   -->   PostgreSQL (Supabase).
-- Authentication   -->   Clerk
-- Caching    -->   Redis
-- API Docs   -->   SpringDoc OpenAPI (Swagger UI)
-- Frontend Deployment   -->   Vercel
-- Backend Deployment    -->   Railway
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | React 19, TypeScript, Vite, Tailwind CSS v4, shadcn/ui |
+| **Backend** | Spring Boot 3, Spring Security, Spring Data JPA |
+| **Database** | PostgreSQL (Supabase) |
+| **Authentication** | Clerk |
+| **Caching** | Redis |
+| **API Documentation** | SpringDoc OpenAPI (Swagger UI) |
+| **Frontend Hosting** | Vercel |
+| **Backend Hosting** | Railway (Serverless Mode) |
 
 ## Getting Started (Local Development)
 
