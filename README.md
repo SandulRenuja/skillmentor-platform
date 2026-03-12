@@ -74,7 +74,7 @@ Add meeting links to confirmed sessions
 ## API Documentation
 
 #### Mentors
-### Method         ### Endpoint                      ### Description
+
 - GET    --->   /api/v1/mentors        --->    PublicList all mentors (paginated). Optional ?name= query param for search.
 - GET    --->   /api/v1/mentors/{id}   --->    PublicGet a single mentor by ID.
 - GET    --->   /api/v1/mentors/{id}/profile   --->    PublicRich mentor profile with stats, per-subject enrollment counts, and reviews.
@@ -83,9 +83,20 @@ Add meeting links to confirmed sessions
 - DELETE --->   /api/v1/mentors/{id}   --->    ADMINDelete a mentor.
 
 ### Subjects
-### Method       ### Endpoint              ### Description
+
 GET     --->   /api/v1/subjects       --->  AnyList all subjects
 GET     --->   /api/v1/subjects/{id}  --->  AnyGet subject by ID
 POST    --->   /api/v1/subjects       --->  ADMIN / MENTORCreate a subject and assign to a mentor
 PUT     --->   /api/v1/subjects/{id}  --->  ADMIN / MENTORUpdate a subject
 DELETE  --->   /api/v1/subjects/{id}  --->  ADMINDelete a subject
+
+### Sessions
+
+GET     --->   /api/v1/sessions   --->  ADMINList all sessions across the platform
+GET     --->   /api/v1/sessions/{id}  ---> ADMIN Get a single session by ID
+POST    --->   /api/v1/sessions   --->ADMIN Create a session manually
+PUT     --->   /api/v1/sessions/{id} --->  ADMIN Update a session (status, meeting link, etc.)
+DELETE  --->   /api/v1/sessions/{id}  ---> ADMIN Delete a session
+POST    --->   /api/v1/sessions/enroll ---> STUDENT / ADMIN Enroll a student in a session (booking flow)
+GET     --->   /api/v1/sessions/my-sessions --->  STUDENT / ADMIN Get the authenticated student's sessions
+PATCH   --->   /api/v1/sessions/{id}/review  --->STUDENT / ADMIN Submit a star rating and review on a completed session
