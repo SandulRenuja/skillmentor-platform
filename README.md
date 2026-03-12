@@ -65,11 +65,11 @@ Add meeting links to confirmed sessions
 
 ###Backend
 
-- CLERK_JWKS_URL   -->   https://key-possum-71.clerk.accounts.dev/.well-known/jwks.json
-- CORS_ALLOWED_ORIGINS   -->   http://localhost:3001,https://skillmentor-frontend-eta.vercel.app
-- DATABASE_URL   -->   jdbc:postgresql://aws-1-ap-southeast-2.pooler.supabase.com:5432/postgres
-- DB_PASSWORD   -->   En8xdyw5ebSY8Tw0
-- DB_USERNAME   -->   postgres.zzaxyilahgcqllvlyuux
+- CLERK_JWKS_URL   
+- CORS_ALLOWED_ORIGINS   
+- DATABASE_URL  
+- DB_PASSWORD   
+- DB_USERNAME   
 
 ## API Documentation
 
