@@ -125,6 +125,8 @@ Add meeting links to confirmed sessions
 | **Backend** | Active | [skill-mentor-backend-server-production.up.railway.app](https://skill-mentor-backend-server-production.up.railway.app) |
 
 ### Project Structure
+
+### Backend Structure
 ```text
 ├── backend/                          # Spring Boot application
 │   ├── src/main/java/com/stemlink/skillmentor/
@@ -194,7 +196,7 @@ Add meeting links to confirmed sessions
 │   └── pom.xml
 ```
 
-###Frontend
+### Frontend Structure
 ```text
 └─ frontend/                         # React + Vite application
     ├── src/
