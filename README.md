@@ -70,3 +70,14 @@ Add meeting links to confirmed sessions
 - DATABASE_URL   -->   jdbc:postgresql://aws-1-ap-southeast-2.pooler.supabase.com:5432/postgres
 - DB_PASSWORD   -->   En8xdyw5ebSY8Tw0
 - DB_USERNAME   -->   postgres.zzaxyilahgcqllvlyuux
+
+## API Documentation
+
+#### Mentors
+MethodEndpointDescription
+GET    --->   /api/v1/mentors   --->    PublicList all mentors (paginated). Optional ?name= query param for search.
+GET    --->   /api/v1/mentors/{id}   --->    PublicGet a single mentor by ID
+GET    --->   /api/v1/mentors/{id}/profile   --->    PublicRich mentor profile with stats, per-subject enrollment counts, and reviews
+POST   --->   /api/v1/mentors   --->   ADMIN / MENTORCreate a new mentor profile
+PUT    --->   /api/v1/mentors/{id}   --->   ADMIN / MENTORUpdate mentor profile
+DELETE --->   /api/v1/mentors/{id}   --->    ADMINDelete a mentor
