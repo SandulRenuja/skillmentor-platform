@@ -75,31 +75,37 @@ Add meeting links to confirmed sessions
 
 #### Mentors
 
-- GET    --->   /api/v1/mentors        --->    PublicList all mentors (paginated). Optional ?name= query param for search.
-- GET    --->   /api/v1/mentors/{id}   --->    PublicGet a single mentor by ID.
-- GET    --->   /api/v1/mentors/{id}/profile   --->    PublicRich mentor profile with stats, per-subject enrollment counts, and reviews.
-- POST   --->   /api/v1/mentors        --->   ADMIN / MENTORCreate a new mentor profile.
-- PUT    --->   /api/v1/mentors/{id}   --->   ADMIN / MENTORUpdate mentor profile.
-- DELETE --->   /api/v1/mentors/{id}   --->    ADMINDelete a mentor.
+| Method | Endpoint | Permission | Description |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/api/v1/mentors` | Public | List all mentors (paginated). Supports `?name=` search. |
+| `GET` | `/api/v1/mentors/{id}` | Public | Get a single mentor by ID |
+| `GET` | `/api/v1/mentors/{id}/profile` | Public | Rich mentor profile with stats and reviews |
+| `POST` | `/api/v1/mentors` | ADMIN / MENTOR | Create a new mentor profile |
+| `PUT` | `/api/v1/mentors/{id}` | ADMIN / MENTOR | Update mentor profile |
+| `DELETE` | `/api/v1/mentors/{id}` | ADMIN | Delete a mentor |
 
 ### Subjects
 
-- GET     --->   /api/v1/subjects       --->  AnyList all subjects
-- GET     --->   /api/v1/subjects/{id}  --->  AnyGet subject by ID
-- POST    --->   /api/v1/subjects       --->  ADMIN / MENTORCreate a subject and assign to a mentor
-- PUT     --->   /api/v1/subjects/{id}  --->  ADMIN / MENTORUpdate a subject
-- DELETE  --->   /api/v1/subjects/{id}  --->  ADMINDelete a subject
+| Method | Endpoint | Permission | Description |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/api/v1/subjects` | Any | List all subjects |
+| `GET` | `/api/v1/subjects/{id}` | Any | Get subject by ID |
+| `POST` | `/api/v1/subjects` | ADMIN / MENTOR | Create a subject and assign to a mentor |
+| `PUT` | `/api/v1/subjects/{id}` | ADMIN / MENTOR | Update a subject |
+| `DELETE` | `/api/v1/subjects/{id}` | ADMIN | Delete a subject |
 
 ### Sessions
 
-- GET     --->   /api/v1/sessions        --->   ADMIN  --->  List all sessions across the platform
-- GET     --->   /api/v1/sessions/{id}   --->  ADMIN --->  Get a single session by ID
-- POST    --->   /api/v1/sessions        --->  ADMIN --->  Create a session manually
-- PUT     --->   /api/v1/sessions/{id}   --->  ADMIN --->  Update a session (status, meeting link, etc.)
-- DELETE  --->   /api/v1/sessions/{id}   --->  ADMIN --->  Delete a session
-- POST    --->   /api/v1/sessions/enroll --->  STUDENT / ADMIN  --->  Enroll a student in a session (booking flow)
-- GET     --->   /api/v1/sessions/my-sessions --->  STUDENT / ADMIN --->  Get the authenticated student's sessions
-- PATCH   --->   /api/v1/sessions/{id}/review  --->STUDENT / ADMIN --->--->Submit a star rating and review on a completed session\
+| Method | Endpoint | Permission | Description |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/api/v1/sessions` | ADMIN | List all sessions across the platform |
+| `GET` | `/api/v1/sessions/{id}` | ADMIN | Get a single session by ID |
+| `POST` | `/api/v1/sessions` | ADMIN | Create a session manually |
+| `PUT` | `/api/v1/sessions/{id}` | ADMIN | Update a session (status, link, etc.) |
+| `DELETE` | `/api/v1/sessions/{id}` | ADMIN | Delete a session |
+| `POST` | `/api/v1/sessions/enroll` | STUDENT / ADMIN | Enroll a student (booking flow) |
+| `GET` | `/api/v1/sessions/my-sessions` | STUDENT / ADMIN | Get authenticated student's sessions |
+| `PATCH` | `/api/v1/sessions/{id}/review` | STUDENT / ADMIN | Submit a star rating and review |
 
 ### Students
 
