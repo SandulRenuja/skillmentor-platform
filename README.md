@@ -115,11 +115,9 @@ Add meeting links to confirmed sessions
 
 ### Project Structure
 
-skillmentor/
-│
-├── backend/                          # Spring Boot application
-│   ├── src/main/java/com/stemlink/skillmentor/
-│   │   ├── configs/                  # CORS, Security, Redis, ModelMapper, OpenAPI
+- backend/        # Spring Boot application
+│   - src/main/java/com/stemlink/skillmentor/
+│   │    - configs/                  # CORS, Security, Redis, ModelMapper, OpenAPI
 │   │   │   ├── CorsConfig.java
 │   │   │   ├── SecurityConfig.java
 │   │   │   ├── RedisConfig.java
