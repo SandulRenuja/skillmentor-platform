@@ -74,13 +74,18 @@ Add meeting links to confirmed sessions
 ## API Documentation
 
 #### Mentors
-### Method             Endpoint                       Description
-- GET    --->   /api/v1/mentors   --->    PublicList all mentors (paginated). Optional ?name= query param for search.
+### Method         ### Endpoint                      ### Description
+- GET    --->   /api/v1/mentors        --->    PublicList all mentors (paginated). Optional ?name= query param for search.
 - GET    --->   /api/v1/mentors/{id}   --->    PublicGet a single mentor by ID.
 - GET    --->   /api/v1/mentors/{id}/profile   --->    PublicRich mentor profile with stats, per-subject enrollment counts, and reviews.
-- POST   --->   /api/v1/mentors   --->   ADMIN / MENTORCreate a new mentor profile.
+- POST   --->   /api/v1/mentors        --->   ADMIN / MENTORCreate a new mentor profile.
 - PUT    --->   /api/v1/mentors/{id}   --->   ADMIN / MENTORUpdate mentor profile.
 - DELETE --->   /api/v1/mentors/{id}   --->    ADMINDelete a mentor.
 
 ### Subjects
-MethodEndpointAuthDescriptionGET/api/v1/subjects✅ AnyList all subjectsGET/api/v1/subjects/{id}✅ AnyGet subject by IDPOST/api/v1/subjects✅ ADMIN / MENTORCreate a subject and assign to a mentorPUT/api/v1/subjects/{id}✅ ADMIN / MENTORUpdate a subjectDELETE/api/v1/subjects/{id}✅ ADMINDelete a subject
+### Method       ### Endpoint              ### Description
+GET     --->   /api/v1/subjects       --->  AnyList all subjects
+GET     --->   /api/v1/subjects/{id}  --->  AnyGet subject by ID
+POST    --->   /api/v1/subjects       --->  ADMIN / MENTORCreate a subject and assign to a mentor
+PUT     --->   /api/v1/subjects/{id}  --->  ADMIN / MENTORUpdate a subject
+DELETE  --->   /api/v1/subjects/{id}  --->  ADMINDelete a subject
