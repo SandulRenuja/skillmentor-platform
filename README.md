@@ -107,3 +107,80 @@ Add meeting links to confirmed sessions
 - POST    --->   /api/v1/students        --->  ADMIN / STUDENT  --->  Create a student profile
 - PUT     --->   /api/v1/students/{id}   --->  ADMIN / STUDENT  --->  Update student profile
 - DELETE  --->   /api/v1/students/{id}   --->  ADMIN  ---> Delete a student
+
+### Deployed Links:
+
+- Frontend   --->   https://skillmentor-frontend-eta.vercel.app/
+- Backend   --->   https://skill-mentor-backend-server-production.up.railway.app
+
+### Project Structure
+
+skillmentor/
+│
+├── backend/                          # Spring Boot application
+│   ├── src/main/java/com/stemlink/skillmentor/
+│   │   ├── configs/                  # CORS, Security, Redis, ModelMapper, OpenAPI
+│   │   │   ├── CorsConfig.java
+│   │   │   ├── SecurityConfig.java
+│   │   │   ├── RedisConfig.java
+│   │   │   ├── ModelMapperConfig.java
+│   │   │   ├── OpenApiConfig.java
+│   │   │   └── ValidatorConfiguration.java
+│   │   ├── constants/
+│   │   │   └── UserRoles.java
+│   │   ├── controllers/              # REST controllers
+│   │   │   ├── AbstractController.java
+│   │   │   ├── MentorController.java
+│   │   │   ├── SessionController.java
+│   │   │   ├── StudentController.java
+│   │   │   └── SubjectController.java
+│   │   ├── dto/                      # Data Transfer Objects
+│   │   │   ├── MentorDTO.java
+│   │   │   ├── SessionDTO.java
+│   │   │   ├── StudentDTO.java
+│   │   │   ├── SubjectDTO.java
+│   │   │   ├── ReviewDTO.java
+│   │   │   ├── ErrorResponse.java
+│   │   │   └── response/
+│   │   │       ├── SessionResponseDTO.java
+│   │   │       ├── AdminSessionResponseDTO.java
+│   │   │       └── MentorProfileResponseDTO.java
+│   │   ├── entities/                 # JPA entities
+│   │   │   ├── Mentor.java
+│   │   │   ├── Student.java
+│   │   │   ├── Subject.java
+│   │   │   └── Session.java
+│   │   ├── exceptions/
+│   │   │   └── SkillMentorException.java
+│   │   ├── repositories/
+│   │   │   ├── MentorRepository.java
+│   │   │   ├── SessionRepository.java
+│   │   │   ├── StudentRepository.java
+│   │   │   └── SubjectRepository.java
+│   │   ├── security/                 # JWT validation & Spring Security filter
+│   │   │   ├── AuthenticationFilter.java
+│   │   │   ├── ClerkValidator.java
+│   │   │   ├── SkillMentorJwtValidator.java
+│   │   │   ├── SkillMentorAuthenticationEntryPoint.java
+│   │   │   ├── TokenValidator.java
+│   │   │   └── UserPrincipal.java
+│   │   ├── services/
+│   │   │   ├── MentorService.java
+│   │   │   ├── SessionService.java
+│   │   │   ├── StudentService.java
+│   │   │   ├── SubjectService.java
+│   │   │   └── impl/
+│   │   │       ├── MentorServiceImpl.java
+│   │   │       ├── SessionServiceImpl.java
+│   │   │       ├── StudentServiceImpl.java
+│   │   │       └── SubjectServiceImpl.java
+│   │   └── utils/
+│   │       └── ValidationUtils.java
+│   ├── src/main/resources/
+│   │   ├── application.properties
+│   │   ├── application-dev.properties
+│   │   └── application-prod.properties
+│   ├── Dockerfile
+│   ├── docker-compose.yaml
+│   └── pom.xml
+│
