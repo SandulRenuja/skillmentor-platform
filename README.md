@@ -57,3 +57,16 @@ Add meeting links to confirmed sessions
 - A Clerk account with a configured application
 
 ## Environment Variables
+
+### Frontend 
+
+- VITE_CLERK_PUBLISHABLE_KEY   -->   pk_test_a2V5LXBvc3N1bS03MS5jbGVyay5hY2NvdW50cy5kZXYk
+- VITE_API_BASE_URL   -->   https://skill-mentor-backend-server-production.up.railway.app
+
+###Backend
+
+- CLERK_JWKS_URL   -->   https://key-possum-71.clerk.accounts.dev/.well-known/jwks.json
+- CORS_ALLOWED_ORIGINS   -->   http://localhost:3001,https://skillmentor-frontend-eta.vercel.app
+- DATABASE_URL   -->   jdbc:postgresql://aws-1-ap-southeast-2.pooler.supabase.com:5432/postgres
+- DB_PASSWORD   -->   En8xdyw5ebSY8Tw0
+- DB_USERNAME   -->   postgres.zzaxyilahgcqllvlyuux
