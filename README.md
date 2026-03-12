@@ -114,5 +114,125 @@ Add meeting links to confirmed sessions
 - Backend   --->   https://skill-mentor-backend-server-production.up.railway.app
 
 ### Project Structure
+```text
+├── backend/                          # Spring Boot application
+│   ├── src/main/java/com/stemlink/skillmentor/
+│   │   ├── configs/                  # CORS, Security, Redis, ModelMapper, OpenAPI
+│   │   │   ├── CorsConfig.java
+│   │   │   ├── SecurityConfig.java
+│   │   │   ├── RedisConfig.java
+│   │   │   ├── ModelMapperConfig.java
+│   │   │   ├── OpenApiConfig.java
+│   │   │   └── ValidatorConfiguration.java
+│   │   ├── constants/
+│   │   │   └── UserRoles.java
+│   │   ├── controllers/              # REST controllers
+│   │   │   ├── AbstractController.java
+│   │   │   ├── MentorController.java
+│   │   │   ├── SessionController.java
+│   │   │   ├── StudentController.java
+│   │   │   └── SubjectController.java
+│   │   ├── dto/                      # Data Transfer Objects
+│   │   │   ├── MentorDTO.java
+│   │   │   ├── SessionDTO.java
+│   │   │   ├── StudentDTO.java
+│   │   │   ├── SubjectDTO.java
+│   │   │   ├── ReviewDTO.java
+│   │   │   ├── ErrorResponse.java
+│   │   │   └── response/
+│   │   │       ├── SessionResponseDTO.java
+│   │   │       ├── AdminSessionResponseDTO.java
+│   │   │       └── MentorProfileResponseDTO.java
+│   │   ├── entities/                 # JPA entities
+│   │   │   ├── Mentor.java
+│   │   │   ├── Student.java
+│   │   │   ├── Subject.java
+│   │   │   └── Session.java
+│   │   ├── exceptions/
+│   │   │   └── SkillMentorException.java
+│   │   ├── repositories/
+│   │   │   ├── MentorRepository.java
+│   │   │   ├── SessionRepository.java
+│   │   │   ├── StudentRepository.java
+│   │   │   └── SubjectRepository.java
+│   │   ├── security/                 # JWT validation & Spring Security filter
+│   │   │   ├── AuthenticationFilter.java
+│   │   │   ├── ClerkValidator.java
+│   │   │   ├── SkillMentorJwtValidator.java
+│   │   │   ├── SkillMentorAuthenticationEntryPoint.java
+│   │   │   ├── TokenValidator.java
+│   │   │   └── UserPrincipal.java
+│   │   ├── services/
+│   │   │   ├── MentorService.java
+│   │   │   ├── SessionService.java
+│   │   │   ├── StudentService.java
+│   │   │   ├── SubjectService.java
+│   │   │   └── impl/
+│   │   │       ├── MentorServiceImpl.java
+│   │   │       ├── SessionServiceImpl.java
+│   │   │       ├── StudentServiceImpl.java
+│   │   │       └── SubjectServiceImpl.java
+│   │   └── utils/
+│   │       └── ValidationUtils.java
+│   ├── src/main/resources/
+│   │   ├── application.properties
+│   │   ├── application-dev.properties
+│   │   └── application-prod.properties
+│   ├── Dockerfile
+│   ├── docker-compose.yaml
+│   └── pom.xml
 
+###Frontend
+
+```text
+└─ frontend/                         # React + Vite application
+    ├── src/
+    │   ├── assets/                   # Images and static files
+    │   ├── components/
+    │   │   ├── ui/                   # shadcn/ui primitives
+    │   │   │   ├── button.tsx
+    │   │   │   ├── card.tsx
+    │   │   │   ├── dialog.tsx
+    │   │   │   ├── calendar.tsx
+    │   │   │   ├── input.tsx
+    │   │   │   ├── label.tsx
+    │   │   │   ├── sheet.tsx
+    │   │   │   ├── alert.tsx
+    │   │   │   └── toast.tsx
+    │   │   ├── Admin/
+    │   │   │   └── AdminLayout.tsx   # Admin sidebar + role guard
+    │   │   ├── Layout.tsx
+    │   │   ├── Navigation.tsx
+    │   │   ├── Footer.tsx
+    │   │   ├── MentorCard.tsx        # Mentor listing card (links to profile)
+    │   │   ├── SchedulingModal.tsx   # Date/time/subject booking modal
+    │   │   ├── SignUpDialog.tsx      # Unauthenticated prompt
+    │   │   ├── StatusPill.tsx        # Session/payment status badge
+    │   │   └── WriteReviewDialog.tsx # Star rating + review submission
+    │   ├── hooks/
+    │   │   └── use-toast.ts
+    │   ├── lib/
+    │   │   └── utils.ts
+    │   ├── pages/
+    │   │   ├── HomePage.tsx          # Mentor discovery / browsing
+    │   │   ├── LoginPage.tsx
+    │   │   ├── DashboardPage.tsx     # Student session dashboard
+    │   │   ├── PaymentPage.tsx       # Bank slip upload
+    │   │   ├── MentorProfilePage.tsx # Rich mentor profile
+    │   │   └── Admin/
+    │   │       ├── AdminOverviewPage.tsx
+    │   │       ├── CreateMentorPage.tsx
+    │   │       ├── CreateSubjectPage.tsx
+    │   │       └── ManageBookingsPage.tsx
+    │   ├── types.ts                  # Shared TypeScript interfaces
+    │   ├── App.tsx                   # Router + route definitions
+    │   ├── main.tsx                  # Entry point + ClerkProvider
+    │   └── index.css                 # Tailwind v4 + CSS design tokens
+    ├── index.html
+    ├── vite.config.ts
+    ├── tsconfig.json
+    ├── components.json               # shadcn/ui config
+    └── vercel.json                   # SPA rewrite rule
+
+'''/
 
