@@ -102,11 +102,14 @@ Add meeting links to confirmed sessions
 - PATCH   --->   /api/v1/sessions/{id}/review  --->STUDENT / ADMIN --->--->Submit a star rating and review on a completed session\
 
 ### Students
-- GET     --->   /api/v1/students        --->  Any authenticated --->  List all students.
-- GET     --->   /api/v1/students/{id}   --->  Any authenticated ---> Get student by ID
-- POST    --->   /api/v1/students        --->  ADMIN / STUDENT  --->  Create a student profile
-- PUT     --->   /api/v1/students/{id}   --->  ADMIN / STUDENT  --->  Update student profile
-- DELETE  --->   /api/v1/students/{id}   --->  ADMIN  ---> Delete a student
+
+| Method | Endpoint | Permission | Description |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/api/v1/students` | Any Authenticated | List all students |
+| `GET` | `/api/v1/students/{id}` | Any Authenticated | Get student by ID |
+| `POST` | `/api/v1/students` | ADMIN / STUDENT | Create a student profile |
+| `PUT` | `/api/v1/students/{id}` | ADMIN / STUDENT | Update student profile |
+| `DELETE` | `/api/v1/students/{id}` | ADMIN | Delete a student |
 
 ### Deployed Links:
 
