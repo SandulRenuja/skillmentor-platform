@@ -110,8 +110,10 @@ Add meeting links to confirmed sessions
 
 ### Deployed Links:
 
-- Frontend   --->   https://skillmentor-frontend-eta.vercel.app/
-- Backend   --->   https://skill-mentor-backend-server-production.up.railway.app
+| Environment | Status | URL |
+| :--- | :--- | :--- |
+| **Frontend** | Live | [skillmentor-frontend-eta.vercel.app](https://skillmentor-frontend-eta.vercel.app/) |
+| **Backend** | Active | [skill-mentor-backend-server-production.up.railway.app](https://skill-mentor-backend-server-production.up.railway.app) |
 
 ### Project Structure
 ```text
