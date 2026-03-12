@@ -181,6 +181,10 @@ Add meeting links to confirmed sessions
 │   ├── Dockerfile
 │   ├── docker-compose.yaml
 │   └── pom.xml
+```
+
+###Frontend
+```text
 └─ frontend/                         # React + Vite application
     ├── src/
     │   ├── assets/                   # Images and static files
@@ -229,6 +233,4 @@ Add meeting links to confirmed sessions
     ├── tsconfig.json
     ├── components.json               # shadcn/ui config
     └── vercel.json                   # SPA rewrite rule
-
-### DDDDD
-
+```
