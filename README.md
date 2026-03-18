@@ -65,7 +65,7 @@ Add meeting links to confirmed sessions
 - VITE_CLERK_PUBLISHABLE_KEY   -->   pk_test_a2V5LXBvc3N1bS03MS5jbGVyay5hY2NvdW50cy5kZXYk
 - VITE_API_BASE_URL   -->   https://skill-mentor-backend-server-production.up.railway.app
 
-###Backend
+### Backend
 
 - CLERK_JWKS_URL   
 - CORS_ALLOWED_ORIGINS   
